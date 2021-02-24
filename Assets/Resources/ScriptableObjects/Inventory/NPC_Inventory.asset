@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6256981448935796233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: Hat
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: Hat
+  basePrice: 15
+  isWearable: 1
+--- !u!114 &-1002304522617170774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: Sword
+  basePrice: 20
+  isWearable: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186de39aae98a47439ea9ae2a6e5af5e, type: 3}
+  m_Name: NPC_Inventory
+  m_EditorClassIdentifier: 
+  inventoryMaxSize: 6
+  inventoryStracture:
+  - {fileID: 11400000, guid: 293c49ecab42e1145a15e689943ea61c, type: 2}
+  - {fileID: 11400000, guid: 92457c272e91c8a4e9e44e76fe0b864f, type: 2}
+  inventory:
+  - {fileID: -1002304522617170774}
+  - {fileID: -6256981448935796233}
+  inventory_Path: Assets/Resources/ScriptableObjects/Inventory/NPC_Inventory.asset
+  currencyAmount: 128
+  buySellFactor: 2
