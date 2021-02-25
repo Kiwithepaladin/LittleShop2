@@ -9,11 +9,12 @@ public class Player : Unit,IInteractable
     public NPC interactingWithUnit;
     [Header("Player UI Elements")]
     public Player_UI self_PlayerUI;
-    void Awake() 
+    
+    public new void Awake() 
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
         playerI = new PlayerInteractions();
-        self_UnitInventory.InitializeInventory();
         self_PlayerUI.myInvetnroy = self_UnitInventory;
     }
     void Update()

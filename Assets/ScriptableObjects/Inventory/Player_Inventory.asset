@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5323834709982593658
+--- !u!114 &-8857055717186062669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,17 +28,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186de39aae98a47439ea9ae2a6e5af5e, type: 3}
   m_Name: Player_Inventory
   m_EditorClassIdentifier: 
+  self_Ref:
+    m_AssetGUID: 1269f987e0787b54b9fcf17c5068c5b6
+    m_SubObjectName: 
   inventoryMaxSize: 6
   inventoryStracture:
   - {fileID: 11400000, guid: 600a1dd550fc56a4fa54ce2452119a16, type: 2}
-  - {fileID: 11400000, guid: 600a1dd550fc56a4fa54ce2452119a16, type: 2}
+  - {fileID: 11400000, guid: c09fd46db7236904187409330337fc39, type: 2}
   inventory:
-  - {fileID: 7399136570054125912}
-  - {fileID: -5323834709982593658}
-  inventory_Path: Assets/Resources/ScriptableObjects/Inventory/Player_Inventory.asset
-  currencyAmount: 22
-  buySellFactor: 2
---- !u!114 &7399136570054125912
+  - {fileID: -8857055717186062669}
+  - {fileID: 6901299479063325221}
+  inventory_Path: Assets/ScriptableObjects/Inventory/Player_Inventory.asset
+  currencyAmount: 100
+  buySellFactor: 0
+--- !u!114 &6901299479063325221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,9 +51,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Apple
+  m_Name: Carrot
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Apple
-  basePrice: 5
+  item_Text: Carrot
+  basePrice: 10
   isWearable: 0

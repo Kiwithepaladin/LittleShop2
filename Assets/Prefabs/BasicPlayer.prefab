@@ -733,12 +733,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7276e5cc53bf0b94e95f5231de834d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self_InventoryReference:
+    m_AssetGUID: 1269f987e0787b54b9fcf17c5068c5b6
+    m_SubObjectName: 
   self_UnitInventory: {fileID: 11400000, guid: 1269f987e0787b54b9fcf17c5068c5b6, type: 2}
   self_isInteractable: 1
-  self_isInteracting: 0
+  self_isInteracting: 1
   interactingWithUnit: {fileID: 0}
   self_PlayerUI:
     myInvetnroy: {fileID: 0}
+    self_listItemUi: []
     UnitsInventoryPanel: {fileID: 6339269264655846368}
     shopNameText: {fileID: 3560521514413625423}
     currenyAmountText: {fileID: 5028469315322251692}

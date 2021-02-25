@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186de39aae98a47439ea9ae2a6e5af5e, type: 3}
   m_Name: NPC_Inventory
   m_EditorClassIdentifier: 
+  self_Ref:
+    m_AssetGUID: c549988b3398c0741affdfa906d9b39d
+    m_SubObjectName: 
   inventoryMaxSize: 6
   inventoryStracture:
   - {fileID: 11400000, guid: 293c49ecab42e1145a15e689943ea61c, type: 2}
@@ -51,6 +54,6 @@ MonoBehaviour:
   inventory:
   - {fileID: -1002304522617170774}
   - {fileID: -6256981448935796233}
-  inventory_Path: Assets/Resources/ScriptableObjects/Inventory/NPC_Inventory.asset
+  inventory_Path: Assets/ScriptableObjects/Inventory/NPC_Inventory.asset
   currencyAmount: 128
   buySellFactor: 2

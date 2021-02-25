@@ -7,9 +7,10 @@ public class NPC : Unit, IInteractable
     [Header("NPC UI Elements")]
     public NPC_UI self_NPCUI; 
 
-    private void Awake() 
+    public new void Awake() 
     {
-        self_UnitInventory.InitializeInventory();
+        base.Awake();
+        //self_UnitInventory.InitializeInventory();
         self_NPCUI.myInvetnroy = self_UnitInventory;
     }
     private void Update() 

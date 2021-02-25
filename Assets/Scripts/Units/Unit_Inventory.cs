@@ -8,6 +8,7 @@ using UnityEngine.AddressableAssets;
 [CreateAssetMenu(fileName = "Empty_Inventory", menuName = "ScriptableObjects/Empty_Inventory", order = 1)]
 public class Unit_Inventory : ScriptableObject
 {
+    [SerializeField] AssetReference self_Ref;
     [SerializeField] private int inventoryMaxSize = 6;
     private int inventoryCurrentSize;
     public List<Unit_Item> inventoryStracture = new List<Unit_Item>();
@@ -67,9 +68,9 @@ public class Unit_Inventory : ScriptableObject
         Unit_Item newItem = ScriptableObject.CreateInstance<Unit_Item>();
         newItem.name = inventoryStracture[i].name;
         newItem.Initialize(inventoryStracture[i].item_Icon, inventoryStracture[i].item_Text, inventoryStracture[i].isWearable,inventoryStracture[i].basePrice);
-        #if UNITY_EDITOR
-        AssetDatabase.AddObjectToAsset(newItem, inventory_Path);
-        #endif
+        // #if UNITY_EDITOR
+        // AssetDatabase.AddObjectToAsset(newItem, inventory_Path);
+        // #endif
         inventory.Add(newItem);
     }
     public void StractureIntoSubAssets()
@@ -96,6 +97,7 @@ public class Unit_Inventory : ScriptableObject
         inventory.Clear();
         //Object[] allsubAssetsResrouces = Resources.LoadAll(inventory_Path,typeof(Unit_Item));
         Object[] allSubAssets = AssetDatabase.LoadAllAssetRepresentationsAtPath(inventory_Path);
+
         foreach(Unit_Item subAsset in allSubAssets)
         {
             if(subAsset != null && AssetDatabase.IsSubAsset(subAsset))
@@ -110,7 +112,7 @@ public class Unit_Inventory : ScriptableObject
     {   
         //Object[] allSubAssets = AssetDatabase.LoadAllAssetRepresentationsAtPath(this.inventory_Path);
         Object[] allsubAssetsResrouces = Resources.LoadAll(inventory_Path,typeof(Unit_Item));
-        Debug.Log(allsubAssetsResrouces.Length);
+        var AddressableSubAssets = self_Ref.SubObjectName;
         foreach(Unit_Item item in allsubAssetsResrouces)
         {
             if(item != null && inventoryCurrentSize <= inventoryMaxSize)

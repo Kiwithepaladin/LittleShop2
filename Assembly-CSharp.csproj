@@ -593,6 +593,12 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -602,17 +608,29 @@
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ResourceManager">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+        <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>E:/ShittyGamesImake/LWS_Inteview/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

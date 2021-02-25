@@ -602,11 +602,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b76909f7e02af46a5be43d03afb6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self_InventoryReference:
+    m_AssetGUID: c549988b3398c0741affdfa906d9b39d
+    m_SubObjectName: 
   self_UnitInventory: {fileID: 11400000, guid: c549988b3398c0741affdfa906d9b39d, type: 2}
   self_isInteractable: 1
   self_isInteracting: 0
   self_NPCUI:
     myInvetnroy: {fileID: 0}
+    self_listItemUi: []
     UnitsInventoryPanel: {fileID: 2055144005}
     shopNameText: {fileID: 2049589462}
     currenyAmountText: {fileID: 755438489}

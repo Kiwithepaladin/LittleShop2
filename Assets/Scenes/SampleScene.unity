@@ -287,6 +287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 88635553803511069, guid: b12455e4ba63bb44388e307c43201ec0, type: 3}
+      propertyPath: self_UnitInventory
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 88635554077223957, guid: b12455e4ba63bb44388e307c43201ec0, type: 3}
       propertyPath: m_Camera
       value: 
@@ -400,5 +404,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 8948463697681688588, guid: 718582130d247b94b9cbacc46769307f, type: 3}
+      propertyPath: self_UnitInventory
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948463697681688588, guid: 718582130d247b94b9cbacc46769307f, type: 3}
+      propertyPath: self_isInteractable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948463697681688588, guid: 718582130d247b94b9cbacc46769307f, type: 3}
+      propertyPath: self_InventoryReference.m_SubObjectName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948463697681688588, guid: 718582130d247b94b9cbacc46769307f, type: 3}
+      propertyPath: self_InventoryReference.m_AssetGUID
+      value: 1269f987e0787b54b9fcf17c5068c5b6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718582130d247b94b9cbacc46769307f, type: 3}
