@@ -16,6 +16,7 @@ public class Unit_Inventory : ScriptableObject
     public string inventory_Path;
     public int currencyAmount = 100;
     public float buySellFactor;
+
     public void InitializeInventory()
     {
         #if UNITY_EDITOR
