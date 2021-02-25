@@ -15,10 +15,13 @@ public class Unit : MonoBehaviour
 
     public virtual void Awake()
     {
-      self_UnitInventory = (Unit_Inventory)self_InventoryReference.editorAsset;
       if(self_UnitInventory != null)
       {
         self_UnitInventory.InitializeInventory();
+      }
+      foreach (Unit_Item item in self_UnitInventory.inventory)
+      {
+          self_InventoryReference.SetEditorAsset(item);
       }
     }
     private void LateUpdate() 
