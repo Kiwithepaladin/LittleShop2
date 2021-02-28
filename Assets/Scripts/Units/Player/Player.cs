@@ -35,11 +35,6 @@ public class Player : Unit,IInteractable
         {
             self_PlayerUI.RefreshUI();
         }
-        if(self_PlayerUI.self_listItemUi != null)
-        {
-            self_PlayerUI.ChangeItemUIInteractable();
-        }
-
     }
     public override void UpdateListOfItemUI() 
     {
@@ -85,8 +80,9 @@ public class Player : Unit,IInteractable
     {
         playerI.Enable();
     }
-    private void OnDisable()
+    new void OnDisable()
     {
+        base.OnDisable();
         playerI.Disable();
     }
     void OnDrawGizmos()

@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 1393623188358877768}
   - component: {fileID: 1190082523}
   - component: {fileID: 8948463697681688588}
+  - component: {fileID: 2237595425956967019}
   m_Layer: 0
   m_Name: Player_Body
   m_TagString: Player
@@ -734,11 +735,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self_InventoryReference:
-    m_AssetGUID: 1269f987e0787b54b9fcf17c5068c5b6
+    m_AssetGUID: b586ebc40259de34982587a7adc32c75
     m_SubObjectName: 
-  self_UnitInventory: {fileID: 11400000, guid: 1269f987e0787b54b9fcf17c5068c5b6, type: 2}
+  self_UnitInventory: {fileID: 2237595425956967019}
   self_isInteractable: 1
-  self_isInteracting: 1
+  self_isInteracting: 0
   interactingWithUnit: {fileID: 0}
   self_PlayerUI:
     myInvetnroy: {fileID: 0}
@@ -748,3 +749,25 @@ MonoBehaviour:
     currenyAmountText: {fileID: 5028469315322251692}
     parentToSpawnAt: {fileID: 3727691193117492659}
     isUiRefreshNeeded: 0
+--- !u!114 &2237595425956967019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8948463697681688578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3be10fb01175864d99d69ac201b3a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalInventory: {fileID: 11400000, guid: b586ebc40259de34982587a7adc32c75, type: 2}
+  inventoryMaxSize: 6
+  inventoryStracture: []
+  inventory: []
+  inventory_Path: 
+  currencyAmount: 0
+  buySellFactor: 0
+  self_Ref:
+    m_AssetGUID: b586ebc40259de34982587a7adc32c75
+    m_SubObjectName: 

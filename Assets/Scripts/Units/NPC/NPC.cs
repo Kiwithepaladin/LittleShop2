@@ -6,11 +6,9 @@ public class NPC : Unit, IInteractable
 {
     [Header("NPC UI Elements")]
     public NPC_UI self_NPCUI; 
-
     public new void Awake() 
     {
         base.Awake();
-        //self_UnitInventory.InitializeInventory();
         self_NPCUI.myInvetnroy = self_UnitInventory;
     }
     private void Update() 
@@ -18,10 +16,6 @@ public class NPC : Unit, IInteractable
         if(self_NPCUI.isUiRefreshNeeded)
         {
             self_NPCUI.RefreshUI();
-        }
-        if(self_NPCUI.self_listItemUi != null)
-        {
-            self_NPCUI.ChangeItemUIInteractable();
         }
     }
     public void FixedUpdate()

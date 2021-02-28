@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8857055717186062669
+--- !u!114 &-8611502089443721391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,11 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Apple
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Apple
-  basePrice: 5
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &-774059168593927675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &-301794844541590042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
   isWearable: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -28,20 +60,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186de39aae98a47439ea9ae2a6e5af5e, type: 3}
   m_Name: Player_Inventory
   m_EditorClassIdentifier: 
-  self_Ref:
-    m_AssetGUID: 1269f987e0787b54b9fcf17c5068c5b6
-    m_SubObjectName: 
-  inventoryMaxSize: 6
-  inventoryStracture:
-  - {fileID: 11400000, guid: 600a1dd550fc56a4fa54ce2452119a16, type: 2}
-  - {fileID: 11400000, guid: c09fd46db7236904187409330337fc39, type: 2}
+  inventoryStracture: []
   inventory:
-  - {fileID: -8857055717186062669}
-  - {fileID: 6901299479063325221}
+  - {fileID: -301794844541590042}
+  - {fileID: 3957461444975053511}
+  - {fileID: -774059168593927675}
+  - {fileID: -8611502089443721391}
+  - {fileID: 6250497256740511356}
+  - {fileID: 9140546586099919259}
   inventory_Path: Assets/ScriptableObjects/Inventory/Player_Inventory.asset
   currencyAmount: 100
-  buySellFactor: 0
---- !u!114 &6901299479063325221
+  buySellFactor: 2
+  self_Ref:
+    m_AssetGUID: b586ebc40259de34982587a7adc32c75
+    m_SubObjectName: 
+--- !u!114 &3957461444975053511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,9 +84,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Carrot
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Carrot
-  basePrice: 10
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &6250497256740511356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &9140546586099919259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
   isWearable: 0

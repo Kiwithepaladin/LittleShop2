@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 88635553803511068}
   - component: {fileID: 88635553803511069}
   - component: {fileID: 88635553803511041}
+  - component: {fileID: 291646836702750992}
   m_Layer: 0
   m_Name: NPC_Body
   m_TagString: ShopKeepers
@@ -603,9 +604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self_InventoryReference:
-    m_AssetGUID: c549988b3398c0741affdfa906d9b39d
+    m_AssetGUID: e5a8fff610bffff46b3d5ec738b7c32b
     m_SubObjectName: 
-  self_UnitInventory: {fileID: 11400000, guid: c549988b3398c0741affdfa906d9b39d, type: 2}
+  self_UnitInventory: {fileID: 291646836702750992}
   self_isInteractable: 1
   self_isInteracting: 0
   self_NPCUI:
@@ -643,6 +644,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &291646836702750992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88635553803511066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3be10fb01175864d99d69ac201b3a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalInventory: {fileID: 11400000, guid: e5a8fff610bffff46b3d5ec738b7c32b, type: 2}
+  inventoryMaxSize: 6
+  inventoryStracture: []
+  inventory: []
+  inventory_Path: 
+  currencyAmount: 0
+  buySellFactor: 0
+  self_Ref:
+    m_AssetGUID: e5a8fff610bffff46b3d5ec738b7c32b
+    m_SubObjectName: 
 --- !u!1 &88635554077223953
 GameObject:
   m_ObjectHideFlags: 0

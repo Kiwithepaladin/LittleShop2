@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6256981448935796233
+--- !u!114 &-6469224003552374010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Hat
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Hat
-  basePrice: 15
-  isWearable: 1
---- !u!114 &-1002304522617170774
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &-3925346974095696988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,12 +26,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Sword
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Sword
-  basePrice: 20
-  isWearable: 1
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &-1878527232067537894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,16 +60,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186de39aae98a47439ea9ae2a6e5af5e, type: 3}
   m_Name: NPC_Inventory
   m_EditorClassIdentifier: 
-  self_Ref:
-    m_AssetGUID: c549988b3398c0741affdfa906d9b39d
-    m_SubObjectName: 
-  inventoryMaxSize: 6
-  inventoryStracture:
-  - {fileID: 11400000, guid: 293c49ecab42e1145a15e689943ea61c, type: 2}
-  - {fileID: 11400000, guid: 92457c272e91c8a4e9e44e76fe0b864f, type: 2}
+  inventoryStracture: []
   inventory:
-  - {fileID: -1002304522617170774}
-  - {fileID: -6256981448935796233}
+  - {fileID: -6469224003552374010}
+  - {fileID: 1733253819167164166}
+  - {fileID: -1878527232067537894}
+  - {fileID: 4616670073887523775}
+  - {fileID: 2547563333272074335}
+  - {fileID: -3925346974095696988}
   inventory_Path: Assets/ScriptableObjects/Inventory/NPC_Inventory.asset
-  currencyAmount: 128
+  currencyAmount: 100
   buySellFactor: 2
+  self_Ref:
+    m_AssetGUID: e5a8fff610bffff46b3d5ec738b7c32b
+    m_SubObjectName: Apple
+--- !u!114 &1733253819167164166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &2547563333272074335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
+--- !u!114 &4616670073887523775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
+  isWearable: 0

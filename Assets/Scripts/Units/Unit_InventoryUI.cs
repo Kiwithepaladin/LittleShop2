@@ -8,8 +8,8 @@ using System;
 [System.Serializable]
 public class Unit_InventoryUI
 {  
-    [HideInInspector] public Unit_Inventory myInvetnroy;
-    [HideInInspector] public List<Unit_ItemUI> self_listItemUi = new List<Unit_ItemUI>();
+    [HideInInspector] public Unit_InventoryReader myInvetnroy;
+    public List<Unit_ItemUI> self_listItemUi = new List<Unit_ItemUI>();
     public GameObject UnitsInventoryPanel;
     public TMP_Text shopNameText;
     public TMP_Text currenyAmountText;
@@ -57,6 +57,7 @@ public class Unit_InventoryUI
     }
     public void RefreshUI()
     {
+        ChangeItemUIInteractable();
         SetCurrentAmountText(myInvetnroy.currencyAmount);
         myInvetnroy.DestoryAllLoadedItems(parentToSpawnAt);
         myInvetnroy.LoadAllItems(parentToSpawnAt);

@@ -8,6 +8,7 @@ public class Unit_InventoryEditor : Editor
 {
     private Unit_Inventory unit_Inv;
     private SerializedObject soUnit_Inv;
+
     private void  OnEnable() 
     {
         unit_Inv = (Unit_Inventory)target;
@@ -21,13 +22,17 @@ public class Unit_InventoryEditor : Editor
         GUILayout.BeginHorizontal();
         if(GUILayout.Button("Generate SubAssets"))
         {
-            unit_Inv.StractureIntoSubAssets();
+            unit_Inv.EditorStractureIntoSubAssets();
         }
         if(GUILayout.Button("Clear All Subassets"))
         {
-            unit_Inv.RemoveAllSubAssetsFromInventory();
+            unit_Inv.EditorRemoveAllSubAssetsFromInventory();
         }
         GUILayout.EndHorizontal();
+        if(GUILayout.Button("Generate Empty Inventory"))
+        {
+            unit_Inv.EditorGenerateEmptyInventory();
+        }
 
     }
 }

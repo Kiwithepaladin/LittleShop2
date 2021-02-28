@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-[System.Serializable]
+
 public class Unit_ItemUI : MonoBehaviour
 {
     public Unit_Item self_UnitItem;
     [SerializeField] private Image self_Icon;
     [SerializeField] private TMP_Text self_Text;
     [SerializeField] private Button tradingButton;
-    public void Initialize()
+    
+    public void Initialize(Unit_Item item)
     {
+        self_UnitItem = item;
         self_Icon.sprite = self_UnitItem.item_Icon;
         self_Text.text = self_UnitItem.item_Text;
-        Unit_Inventory cacheInventory = GameObject.FindWithTag("Player").GetComponent<Player>().self_UnitInventory;
-        Unit_Inventory tempMainAsset;
+        Unit_InventoryReader cacheInventory = GameObject.FindWithTag("Player").GetComponent<Player>().self_UnitInventory;
+        Unit_InventoryReader tempMainAsset;
         if(transform.root.GetComponentInChildren<NPC>() == null)
         {
             tempMainAsset = transform.root.GetComponentInChildren<Unit>().self_UnitInventory;
