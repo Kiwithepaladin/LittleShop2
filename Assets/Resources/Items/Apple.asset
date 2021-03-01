@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
   item_Text: Apple
-  basePrice: 0
+  basePrice: 5
   isWearable: 0

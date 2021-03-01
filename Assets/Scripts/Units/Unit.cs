@@ -24,17 +24,18 @@ public class Unit : MonoBehaviour
 
       foreach (Unit_Item i in items.Result)
       {
-        if(string.IsNullOrWhiteSpace(i.name))
-        {
-           int index = items.Result.IndexOf(i);
-           if(self_UnitInventory.inventoryStracture.Count > index)
-           {
-              Debug.Log(items.Result.Count);
-              Unit_Item itemStracture = self_UnitInventory.inventoryStracture[index];
-              i.Initialize(itemStracture.item_Icon,itemStracture.item_Text,itemStracture.isWearable,itemStracture.basePrice);
-              tempList.Add(i);
-           }
-        }
+          int index = items.Result.IndexOf(i);
+          if(self_UnitInventory.inventoryStracture.Count > index)
+          {
+            Unit_Item itemStracture = self_UnitInventory.inventoryStracture[index];
+            i.Initialize(itemStracture.item_Icon,itemStracture.item_Text,itemStracture.isWearable,itemStracture.basePrice);
+            tempList.Add(i);
+          }
+          else
+          {
+            i.Initialize();
+            tempList.Add(i);
+          }
       }
       self_UnitInventory.inventory = tempList;
     }
@@ -42,7 +43,7 @@ public class Unit : MonoBehaviour
     public void OnDisable() 
     {
       self_InventoryReference.ReleaseAsset();
-      self_UnitInventory.ResetAllSubAssets();
+      //self_UnitInventory.ResetAllSubAssets();
     }
 
 }

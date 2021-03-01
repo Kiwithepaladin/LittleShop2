@@ -9,7 +9,7 @@ public class NPC : Unit, IInteractable
     public new void Awake() 
     {
         base.Awake();
-        self_NPCUI.myInvetnroy = self_UnitInventory;
+        self_NPCUI.Invetnroy = self_UnitInventory;
     }
     private void Update() 
     {

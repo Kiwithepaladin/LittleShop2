@@ -25,12 +25,13 @@ public class Unit_Item : ScriptableObject
         Player cache = GameObject.FindWithTag("Player").GetComponent<Player>();
         if(cache.interactingWithUnit != null)
         {
-            Unit_InventoryReader.TradeItem(this,cache.self_UnitInventory,cache.interactingWithUnit.self_UnitInventory);
             cache.self_UnitInventory.currencyAmount += (int)(basePrice / cache.self_UnitInventory.buySellFactor);
             cache.interactingWithUnit.self_UnitInventory.currencyAmount -= (int)(basePrice / cache.interactingWithUnit.self_UnitInventory.buySellFactor);
+            Unit_InventoryReader.TradeItem(this,cache.self_UnitInventory,cache.interactingWithUnit.self_UnitInventory);
             cache.interactingWithUnit.self_NPCUI.isUiRefreshNeeded = true;
             cache.self_PlayerUI.isUiRefreshNeeded = true;
             Debug.Log("Selling!");
+            return;
         }
     }
     public void BuyItem()
@@ -39,12 +40,13 @@ public class Unit_Item : ScriptableObject
         Player cache = GameObject.FindWithTag("Player").GetComponent<Player>();
         if(cache.interactingWithUnit != null)
         {
-            Unit_InventoryReader.TradeItem(this,cache.interactingWithUnit.self_UnitInventory,cache.self_UnitInventory);
-            cache.self_UnitInventory.currencyAmount -= (int)(basePrice * cache.self_UnitInventory.buySellFactor);
+            cache.self_UnitInventory.currencyAmount -=  (int)(basePrice * cache.self_UnitInventory.buySellFactor);
             cache.interactingWithUnit.self_UnitInventory.currencyAmount += (int)(basePrice * cache.interactingWithUnit.self_UnitInventory.buySellFactor);
+            Unit_InventoryReader.TradeItem(this,cache.interactingWithUnit.self_UnitInventory,cache.self_UnitInventory);
             cache.interactingWithUnit.self_NPCUI.isUiRefreshNeeded = true;
             cache.self_PlayerUI.isUiRefreshNeeded = true;
             Debug.Log("Buying!");
+            return;
         }
     }
     public void ResetItem()

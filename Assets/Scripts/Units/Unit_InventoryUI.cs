@@ -8,16 +8,16 @@ using System;
 [System.Serializable]
 public class Unit_InventoryUI
 {  
-    [HideInInspector] public Unit_InventoryReader myInvetnroy;
+    [HideInInspector] public Unit_InventoryReader Invetnroy;
     public List<Unit_ItemUI> self_listItemUi = new List<Unit_ItemUI>();
     public GameObject UnitsInventoryPanel;
-    public TMP_Text shopNameText;
-    public TMP_Text currenyAmountText;
+    [SerializeField] private TMP_Text shopNameText;
+    [SerializeField] private TMP_Text currenyAmountText;
     public Transform parentToSpawnAt;
-    [HideInInspector] public bool isUiRefreshNeeded = false;
+    [HideInInspector] public bool isUiRefreshNeeded = true;
     public void ToggleUnitsInventory()
     {
-        SetShopNameText(myInvetnroy.name);
+        SetShopNameText(Invetnroy.name);
         UnitsInventoryPanel.SetActive(!UnitsInventoryPanel.activeInHierarchy);
     }
     public void DisableUnitInventory()
@@ -36,13 +36,14 @@ public class Unit_InventoryUI
     public void ChangeItemUIInteractable()
     {
         Player cacheInventory = GameObject.FindWithTag("Player").GetComponent<Player>();
+        Debug.Log(self_listItemUi.Count + " SIZE!");
         foreach (Unit_ItemUI itemUI in self_listItemUi)
         {
-            //Buy
+            // //Buy
             if(cacheInventory.interactingWithUnit.self_UnitInventory.inventory.Contains(itemUI.self_UnitItem) && 
             itemUI.self_UnitItem.basePrice * cacheInventory.interactingWithUnit.self_UnitInventory.buySellFactor < cacheInventory.self_UnitInventory.currencyAmount)
             {
-                itemUI.LitOutItem();
+                itemUI.LitOutItem(); 
                 return;
             }
             //Sell
@@ -53,14 +54,15 @@ public class Unit_InventoryUI
                 return;
             }
             itemUI.GreyOutItem();
+            return;
         }
     }
     public void RefreshUI()
     {
+        SetCurrentAmountText(Invetnroy.currencyAmount);
+        Invetnroy.DestoryAllLoadedItems(parentToSpawnAt);
+        Invetnroy.LoadAllItems(parentToSpawnAt);
         ChangeItemUIInteractable();
-        SetCurrentAmountText(myInvetnroy.currencyAmount);
-        myInvetnroy.DestoryAllLoadedItems(parentToSpawnAt);
-        myInvetnroy.LoadAllItems(parentToSpawnAt);
         isUiRefreshNeeded = false;
     }
 }

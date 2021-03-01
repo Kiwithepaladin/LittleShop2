@@ -11,17 +11,7 @@ ScriptsOnlyBuild:
     - Unit_ItemUI
     Unity.Addressables.Editor.dll:
     - UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject
-    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptFastMode
-    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedMode
-    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedPlayMode
-    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptVirtualMode
     - UnityEditor.AddressableAssets.GUI.AddressableAssetsWindow
-    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroupTemplate
-    - UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
-    - UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
-    - UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema
-    - UnityEditor.AddressableAssets.Settings.GroupSchemas.PlayerDataGroupSchema
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -159,7 +149,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 21194a80f7c677b015f3076cc9d974ec
+      Hash: ee565d3906ba837ebb6f62b3f79f7fd5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit_ItemUI
@@ -531,7 +521,7 @@ ScriptsOnlyBuild:
     className: DownloadableSample
   - hash:
       serializedVersion: 2
-      Hash: 9cd3f1f8a756240c8acf91d53d2a5251
+      Hash: 6375a52393aeacae4eb005e93e15c2b3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPC
@@ -615,7 +605,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 80684dc7957f31c552ff09247073bed5
+      Hash: 6b84dbde1d363a1046a15cf3441d7482
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit_Inventory
@@ -645,7 +635,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 6bf433e20fb4de6db0ceeb0fe256d6f1
+      Hash: b908aa8c9aa2f2430702ebd1d93a8fc7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Unit_InventoryReader
@@ -669,7 +659,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 5f1849de2d2242dd4f4253698d135925
+      Hash: 69536a08701751ca6861e19a56776399
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

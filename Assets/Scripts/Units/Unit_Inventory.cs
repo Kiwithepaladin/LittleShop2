@@ -16,16 +16,14 @@ public class Unit_Inventory : ScriptableObject
     public string inventory_Path;
     public int currencyAmount = 100;
     public float buySellFactor;
-    public AssetReference self_Ref;
 
-    public static void CloneInventory(Unit_Inventory original,out List<Unit_Item> _inventoryStracture, out List<Unit_Item> _inventory,out string _path, out int _currencyAmount, out float _factor, out AssetReference _ref)
+    public static void CloneInventory(Unit_Inventory original,out List<Unit_Item> _inventoryStracture, out List<Unit_Item> _inventory,out string _path, out int _currencyAmount, out float _factor)
     {
         _inventoryStracture = original.inventoryStracture;
         _inventory = original.inventory;
         _path = original.inventory_Path;
         _currencyAmount = original.currencyAmount;
         _factor = original.buySellFactor;
-        _ref = original.self_Ref;
     }
     public void EditorStractureIntoSubAssets()
     {

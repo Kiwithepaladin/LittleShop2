@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -14,11 +13,10 @@ public class Unit_InventoryReader : MonoBehaviour
     public string inventory_Path;
     public int currencyAmount;
     public float buySellFactor;
-    public AssetReference self_Ref;
 
     private void Awake() 
     {
-        Unit_Inventory.CloneInventory(originalInventory,out inventoryStracture,out inventory,out inventory_Path,out currencyAmount,out buySellFactor,out self_Ref);
+        Unit_Inventory.CloneInventory(originalInventory,out inventoryStracture,out inventory,out inventory_Path,out currencyAmount,out buySellFactor);
     }
     public void ResetAllSubAssets()
     {
@@ -61,19 +59,14 @@ public class Unit_InventoryReader : MonoBehaviour
         removeFromInv.inventory[invIndex].ResetItem();
         removeFromInv.inventoryStracture.RemoveAt(strIndex);
 
-        // foreach (Unit_Item i  in addToInv.inventory)
-        // {
-        //     if(string.IsNullOrWhiteSpace(i.name))
-        //     {
-        //         i.Initialize(tempItem.item_Icon,tempItem.item_Text,tempItem.isWearable,tempItem.basePrice);
-        //         break;
-        //     }
-        // }
-        addToInv.inventory.Add(tempItem);
+        foreach (Unit_Item i  in addToInv.inventory)
+        {
+            if(string.IsNullOrWhiteSpace(i.name))
+            {
+                i.Initialize(tempItem.item_Icon,tempItem.item_Text,tempItem.isWearable,tempItem.basePrice);
+                break;
+            }
+        }
         addToInv.inventoryStracture.Add((Unit_Item)Resources.Load("Items/" + tempItem.name));
-        #if UNITY_EDITOR
-        AssetDatabase.SaveAssets();
-        #endif
-        
     }
 }

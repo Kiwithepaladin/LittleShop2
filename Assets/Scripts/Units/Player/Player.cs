@@ -15,7 +15,7 @@ public class Player : Unit,IInteractable
         base.Awake();
         rb = GetComponent<Rigidbody2D>();
         playerI = new PlayerInteractions();
-        self_PlayerUI.myInvetnroy = self_UnitInventory;
+        self_PlayerUI.Invetnroy = self_UnitInventory;
     }
     void Update()
     {
