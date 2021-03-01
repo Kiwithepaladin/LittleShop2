@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - Unit_InventoryEditor
     Assembly-CSharp.dll:
     - NPC
     - Player
@@ -11,7 +9,17 @@ ScriptsOnlyBuild:
     - Unit_ItemUI
     Unity.Addressables.Editor.dll:
     - UnityEditor.AddressableAssets.AddressableAssetSettingsDefaultObject
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptFastMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedPlayMode
+    - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptVirtualMode
     - UnityEditor.AddressableAssets.GUI.AddressableAssetsWindow
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetGroupTemplate
+    - UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema
+    - UnityEditor.AddressableAssets.Settings.GroupSchemas.PlayerDataGroupSchema
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -20,9 +28,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
-    Unity.ResourceManager.dll:
-    - UnityEngine.ResourceManagement.Diagnostics.DiagnosticEventCollector
-    - UnityEngine.ResourceManagement.Util.DelayedActionManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -79,47 +84,47 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 11794}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 12692}
+      Script: {instanceID: 12868}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 12874}
+      Script: {instanceID: 13016}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 13650}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13740}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13820}
     - Class: 114
-      Script: {instanceID: 13822}
+      Script: {instanceID: 13866}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 14040}
     - Class: 114
-      Script: {instanceID: 14014}
+      Script: {instanceID: 14058}
     - Class: 114
-      Script: {instanceID: 14080}
+      Script: {instanceID: 14124}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 14320}
     - Class: 114
-      Script: {instanceID: 14312}
+      Script: {instanceID: 14356}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 14408}
     - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 14424}
     - Class: 114
-      Script: {instanceID: 14462}
+      Script: {instanceID: 14506}
     - Class: 114
-      Script: {instanceID: 14548}
+      Script: {instanceID: 14592}
     - Class: 114
-      Script: {instanceID: 14736}
+      Script: {instanceID: 14780}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -127,6 +132,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -141,12 +148,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
-  - hash:
-      serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: ee565d3906ba837ebb6f62b3f79f7fd5
@@ -509,6 +510,12 @@ ScriptsOnlyBuild:
     className: HIDDescriptorWindow
   - hash:
       serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -798,4 +805,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/ShittyGamesImake/BuildsLWS/LWS_Inteview.exe
+  playerPath: C:/Users/nadav/OneDrive/Documents/GitHub/LittleShopBuild/LWS_Inteview.exe

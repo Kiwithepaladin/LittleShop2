@@ -10,29 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item_Icon: {fileID: 0}
-  item_Text: 
-  basePrice: 0
-  isWearable: 0
---- !u!114 &-774059168593927675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
   item_Text: Apple
   basePrice: 5
   isWearable: 0
---- !u!114 &-301794844541590042
+--- !u!114 &-774059168593927675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,6 +31,22 @@ MonoBehaviour:
   item_Icon: {fileID: 0}
   item_Text: Carrot
   basePrice: 10
+  isWearable: 0
+--- !u!114 &-301794844541590042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item_Icon: {fileID: 0}
+  item_Text: 
+  basePrice: 0
   isWearable: 0
 --- !u!114 &11400000
 MonoBehaviour:

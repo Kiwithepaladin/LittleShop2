@@ -26,12 +26,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: 
+  m_Name: Sword
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: 
-  basePrice: 0
-  isWearable: 0
+  item_Text: Sword
+  basePrice: 20
+  isWearable: 1
 --- !u!114 &-1878527232067537894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,12 +83,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Sword
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Sword
-  basePrice: 20
-  isWearable: 1
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
 --- !u!114 &2547563333272074335
 MonoBehaviour:
   m_ObjectHideFlags: 0

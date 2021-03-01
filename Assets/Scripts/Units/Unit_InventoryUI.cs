@@ -8,6 +8,7 @@ using System;
 [System.Serializable]
 public class Unit_InventoryUI
 {  
+    public event Action test;
     [HideInInspector] public Unit_InventoryReader Invetnroy;
     public List<Unit_ItemUI> self_listItemUi = new List<Unit_ItemUI>();
     public GameObject UnitsInventoryPanel;
@@ -57,11 +58,12 @@ public class Unit_InventoryUI
             return;
         }
     }
-    public void RefreshUI()
+    public IEnumerator RefreshUI()
     {
         SetCurrentAmountText(Invetnroy.currencyAmount);
         Invetnroy.DestoryAllLoadedItems(parentToSpawnAt);
         Invetnroy.LoadAllItems(parentToSpawnAt);
+        yield return new WaitForSecondsRealtime(0.5f);
         ChangeItemUIInteractable();
         isUiRefreshNeeded = false;
     }
