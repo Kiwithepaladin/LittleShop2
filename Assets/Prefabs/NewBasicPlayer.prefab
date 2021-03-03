@@ -16,7 +16,7 @@ MonoBehaviour:
   shopNameText: {fileID: 9108978460743164790}
   currenyAmountText: {fileID: 777050047622249109}
   parentToSpawnAt: {fileID: 8987917901757134474}
-  isUIRefreshNeeded: 0
+  moveInput: {x: 0, y: 0}
 --- !u!1001 &5692572838259946297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8948463697237353230, guid: 718582130d247b94b9cbacc46769307f, type: 3}
       propertyPath: m_Name
-      value: BasicPlayer
+      value: NewBasicPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 8948463697237353230, guid: 718582130d247b94b9cbacc46769307f, type: 3}
       propertyPath: m_IsActive

@@ -9,9 +9,10 @@ namespace Inventory.Units
     {
 
         Rigidbody2D rb;
-        [SerializeField] Vector2 moveInput;
+        Vector2 moveInput;
         PlayerInteractions playerI;
 
+        [SerializeField] private Unit target;
 
         public new void Awake()
         {
@@ -20,11 +21,11 @@ namespace Inventory.Units
             base.Awake();
         }
 
-        public void Update()
+        public new void Update()
         {
             moveInput = playerI.Player.Move.ReadValue<Vector2>();
-            Debug.Log(moveInput);
             base.Update();
+            Debug.Log(IsInteracting);
         }
 
         public void FixedUpdate()
@@ -32,6 +33,27 @@ namespace Inventory.Units
             rb.velocity = moveInput * 5f;
         }
 
+        public void Interact()
+        {
+            RaycastHit2D[] hitColliders = Physics2D.BoxCastAll(this.transform.position, new Vector2(1.5f,1.5f),0f,Vector2.zero);
+            if(hitColliders.Length > 1 && !IsInteracting)
+            {
+                foreach(RaycastHit2D collision in hitColliders)
+                {
+                    if(collision.collider != null)
+                    {
+                        IsInteracting = true;
+                        target = collision.collider.GetComponent<NPC>();
+                    }
+                }
+            }
+        }
+        public new void ExitInteract()
+        {
+            base.ExitInteract();
+            IsInteracting = false;
+            target = null;
+        }
         private void OnEnable() 
         {
             playerI.Enable();

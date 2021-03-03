@@ -11,21 +11,21 @@ namespace Inventory.Units
     {
         //General interaction
         public bool IsInteractable {get; set;}
-        public new bool IsInteracting {get; set;}
-        public new bool DidEnterInteract {get; set;}
+        public bool IsInteracting {get; set;}
+        public bool DidEnterInteract {get; set;}
 
         //UI STUFF
         [Header("UI")]
         [SerializeField] private GameObject unitInventoryPanel;
-        public new GameObject UnitsInventoryPanel {get{return unitInventoryPanel;} set{unitInventoryPanel = value;}}
+        public GameObject UnitsInventoryPanel {get{return unitInventoryPanel;} set{unitInventoryPanel = value;}}
         [SerializeField] private TMP_Text shopNameText;
-        public new TMP_Text ShopNameText {get{return shopNameText;} set{shopNameText = value;}}
+        public TMP_Text ShopNameText {get{return shopNameText;} set{shopNameText = value;}}
         [SerializeField] private TMP_Text currenyAmountText;
-        public new TMP_Text CurrenyAmountText {get{return currenyAmountText;} set{currenyAmountText = value;}}
+        public TMP_Text CurrenyAmountText {get{return currenyAmountText;} set{currenyAmountText = value;}}
         [SerializeField] private Transform parentToSpawnAt;
-        public new Transform ParentToSpawnAt {get{return parentToSpawnAt;} set{parentToSpawnAt = value;}}
+        public Transform ParentToSpawnAt {get{return parentToSpawnAt;} set{parentToSpawnAt = value;}}
         private bool isUIRefreshNeeded;
-        public new bool IsUIRefreshNeeded {get{return isUIRefreshNeeded;} set{IsUIRefreshNeeded = value;}}
+        public bool IsUIRefreshNeeded {get{return isUIRefreshNeeded;} set{IsUIRefreshNeeded = value;}}
 
 
         public virtual void Awake()
@@ -37,18 +37,22 @@ namespace Inventory.Units
         public virtual void Update()
         {
             RaycastHit2D[] hitColliders = Physics2D.BoxCastAll(this.transform.position, new Vector2(1.5f,1.5f),0f,Vector2.zero);
-            if (hitColliders.Length < 1)
+            if (hitColliders.Length == 0)
             {
                 ExitInteract();
+                Debug.Log("Exit!");
             }
-            // else if(hitColliders.Length > 1 && !DidEnterInteract)
-            // {
-            //     EnterInteract(hitColliders[1]);
-            // }
-            // else if(hitColliders.Length > 1 && DidEnterInteract)
-            // {
-            //     StayInteract(hitColliders[1]);
-            // }
+            else if(hitColliders.Length > 1)
+            {
+                if(!DidEnterInteract)
+                {
+                    EnterInteract(hitColliders[1]);
+                }
+                else
+                {
+                    StayInteract(hitColliders[1]);
+                }
+            }
             if(IsUIRefreshNeeded)
             {
                 RefreshUI();
@@ -62,7 +66,6 @@ namespace Inventory.Units
         }
         public virtual void EnterInteract(RaycastHit2D target)
         {
-            IsUIRefreshNeeded = true;
             DidEnterInteract = true;
         }
         public virtual void ExitInteract()
