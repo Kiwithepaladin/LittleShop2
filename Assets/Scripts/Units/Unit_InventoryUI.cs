@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.Events;
+using System.Threading.Tasks;
 
 [System.Serializable]
 public class Unit_InventoryUI
-{  
-    public event Action test;
+{
     [HideInInspector] public Unit_InventoryReader Invetnroy;
     public List<Unit_ItemUI> self_listItemUi = new List<Unit_ItemUI>();
     public GameObject UnitsInventoryPanel;
@@ -45,26 +46,24 @@ public class Unit_InventoryUI
             itemUI.self_UnitItem.basePrice * cacheInventory.interactingWithUnit.self_UnitInventory.buySellFactor < cacheInventory.self_UnitInventory.currencyAmount)
             {
                 itemUI.LitOutItem(); 
-                return;
+                continue;
             }
             //Sell
             if(cacheInventory.self_UnitInventory.inventory.Contains(itemUI.self_UnitItem) && 
             itemUI.self_UnitItem.basePrice / cacheInventory.interactingWithUnit.self_UnitInventory.buySellFactor < cacheInventory.interactingWithUnit.self_UnitInventory.currencyAmount)
             {
                 itemUI.LitOutItem();
-                return;
+                continue;
             }
             itemUI.GreyOutItem();
-            return;
         }
+        return;
     }
-    public IEnumerator RefreshUI()
+    public void RefreshUI()
     {
         SetCurrentAmountText(Invetnroy.currencyAmount);
         Invetnroy.DestoryAllLoadedItems(parentToSpawnAt);
         Invetnroy.LoadAllItems(parentToSpawnAt);
-        yield return new WaitForSecondsRealtime(0.5f);
-        ChangeItemUIInteractable();
         isUiRefreshNeeded = false;
     }
 }

@@ -34,6 +34,8 @@ public class Player : Unit,IInteractable
         if(self_PlayerUI.isUiRefreshNeeded)
         {
             self_PlayerUI.RefreshUI();
+            UpdateListOfItemUI();
+            self_PlayerUI.ChangeItemUIInteractable();
         }
     }
     public override void UpdateListOfItemUI() 
@@ -57,6 +59,7 @@ public class Player : Unit,IInteractable
                     {
                         self_isInteracting = true;
                         interactingWithUnit = collision.collider.GetComponent<NPC>();
+                        EnterInteract(hitColliders[0]);
                         //interactingWithUnit.self_NPCUI.self_NPCUI
                     }
                 }
@@ -65,11 +68,6 @@ public class Player : Unit,IInteractable
         else if(hitColliders.Length <= 1)
         {
             ExitInteract();
-        }
-        if(self_isInteracting)
-        {
-            //PlaceHolder Variable
-            EnterInteract(hitColliders[0]);
         }
     }
     void FixedUpdate()
@@ -93,12 +91,14 @@ public class Player : Unit,IInteractable
 
     public void StayInteract(RaycastHit2D target)
     {
-        UpdateListOfItemUI();
+        //UpdateListOfItemUI();
     }
 
     public void EnterInteract(RaycastHit2D target)
     {
         self_PlayerUI.RefreshUI();
+        UpdateListOfItemUI();
+        self_PlayerUI.ChangeItemUIInteractable();
         self_PlayerUI.ToggleUnitsInventory();
     }
 

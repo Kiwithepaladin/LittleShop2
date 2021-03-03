@@ -16,6 +16,8 @@ public class NPC : Unit, IInteractable
         if(self_NPCUI.isUiRefreshNeeded)
         {
             self_NPCUI.RefreshUI();
+            UpdateListOfItemUI();
+            self_NPCUI.ChangeItemUIInteractable();
         }
     }
     public void FixedUpdate()
@@ -41,6 +43,8 @@ public class NPC : Unit, IInteractable
         {
             self_NPCUI.ToggleUnitsInventory();
             self_NPCUI.RefreshUI();
+            UpdateListOfItemUI();
+            self_NPCUI.ChangeItemUIInteractable();
         }
         else if(target.collider.CompareTag("Player") && !target.collider.GetComponent<Player>().self_isInteracting && self_NPCUI.UnitsInventoryPanel.activeInHierarchy)
         {

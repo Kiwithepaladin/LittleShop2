@@ -26,12 +26,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Sword
+  m_Name: 
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Sword
-  basePrice: 20
-  isWearable: 1
+  item_Text: 
+  basePrice: 0
+  isWearable: 0
 --- !u!114 &-1878527232067537894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryStracture:
   - {fileID: 11400000, guid: 92457c272e91c8a4e9e44e76fe0b864f, type: 2}
-  - {fileID: 11400000, guid: 293c49ecab42e1145a15e689943ea61c, type: 2}
   inventory:
   - {fileID: -6469224003552374010}
   - {fileID: 1733253819167164166}
@@ -71,7 +70,7 @@ MonoBehaviour:
   - {fileID: 2547563333272074335}
   - {fileID: -3925346974095696988}
   inventory_Path: Assets/ScriptableObjects/Inventory/NPC_Inventory.asset
-  currencyAmount: 100
+  currencyAmount: 50
   buySellFactor: 2
 --- !u!114 &1733253819167164166
 MonoBehaviour:

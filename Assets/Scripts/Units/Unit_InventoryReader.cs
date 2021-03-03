@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using System;
+using UnityEngine.Events;
+using System.Threading.Tasks;
 
 public class Unit_InventoryReader : MonoBehaviour
 {
@@ -20,6 +23,7 @@ public class Unit_InventoryReader : MonoBehaviour
     }
     public void ResetAllSubAssets()
     {
+        //Could prob replace with linq quries
       foreach (Unit_Item i in inventory)
       {
         if(!string.IsNullOrEmpty(i.name))

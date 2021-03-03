@@ -5,6 +5,7 @@ using UnityEditor;
 using System.Linq;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Empty_Inventory", menuName = "ScriptableObjects/Empty_Inventory", order = 1)]
 public class Unit_Inventory : ScriptableObject
