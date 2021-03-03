@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Inventory.Units.Interfaces;
 
 namespace Inventory.Units
 {
     public class Player : Unit
     {
-
         Rigidbody2D rb;
         Vector2 moveInput;
         PlayerInteractions playerI;
 
-        [SerializeField] private Unit target;
+        [SerializeField] private IIntractable target;
 
         public new void Awake()
         {
@@ -23,8 +22,8 @@ namespace Inventory.Units
 
         public new void Update()
         {
-            moveInput = playerI.Player.Move.ReadValue<Vector2>();
             base.Update();
+            moveInput = playerI.Player.Move.ReadValue<Vector2>();
             Debug.Log(IsInteracting);
         }
 
@@ -32,7 +31,11 @@ namespace Inventory.Units
         {
             rb.velocity = moveInput * 5f;
         }
-
+        public new void OnCollisionExit2D(Collision2D other)
+        {
+            base.OnCollisionExit2D(other);
+            IsInteracting = false;
+        }
         public void Interact()
         {
             RaycastHit2D[] hitColliders = Physics2D.BoxCastAll(this.transform.position, new Vector2(1.5f,1.5f),0f,Vector2.zero);
@@ -43,16 +46,10 @@ namespace Inventory.Units
                     if(collision.collider != null)
                     {
                         IsInteracting = true;
-                        target = collision.collider.GetComponent<NPC>();
+                        target = collision.collider.GetComponent<IIntractable>();
                     }
                 }
             }
-        }
-        public new void ExitInteract()
-        {
-            base.ExitInteract();
-            IsInteracting = false;
-            target = null;
         }
         private void OnEnable() 
         {

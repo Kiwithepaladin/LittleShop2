@@ -10,9 +10,8 @@ namespace Inventory.Units
     public abstract class Unit : MonoBehaviour, IIntractable, IIntractableUI
     {
         //General interaction
-        public bool IsInteractable {get; set;}
-        public bool IsInteracting {get; set;}
-        public bool DidEnterInteract {get; set;}
+        public bool IsInteractable {get; set;} = true;
+        public bool IsInteracting {get; set;} = false;
 
         //UI STUFF
         [Header("UI")]
@@ -25,7 +24,7 @@ namespace Inventory.Units
         [SerializeField] private Transform parentToSpawnAt;
         public Transform ParentToSpawnAt {get{return parentToSpawnAt;} set{parentToSpawnAt = value;}}
         private bool isUIRefreshNeeded;
-        public bool IsUIRefreshNeeded {get{return isUIRefreshNeeded;} set{IsUIRefreshNeeded = value;}}
+        public bool IsUIRefreshNeeded {get{return isUIRefreshNeeded;} set{isUIRefreshNeeded = value;}}
 
 
         public virtual void Awake()
@@ -36,52 +35,32 @@ namespace Inventory.Units
 
         public virtual void Update()
         {
-            RaycastHit2D[] hitColliders = Physics2D.BoxCastAll(this.transform.position, new Vector2(1.5f,1.5f),0f,Vector2.zero);
-            if (hitColliders.Length == 0)
-            {
-                ExitInteract();
-                Debug.Log("Exit!");
-            }
-            else if(hitColliders.Length > 1)
-            {
-                if(!DidEnterInteract)
-                {
-                    EnterInteract(hitColliders[1]);
-                }
-                else
-                {
-                    StayInteract(hitColliders[1]);
-                }
-            }
             if(IsUIRefreshNeeded)
             {
                 RefreshUI();
             }
         }
-        
-        //General Interaction
-        public virtual void StayInteract(RaycastHit2D target)
+        public virtual void OnCollisionEnter2D(Collision2D other) 
         {
-            //Currently do nothing! put loop here
+            IsUIRefreshNeeded = true;
         }
-        public virtual void EnterInteract(RaycastHit2D target)
+        public virtual void OnCollisionStay2D(Collision2D other)
         {
-            DidEnterInteract = true;
+            if(this.IsInteracting && other.collider.GetComponent<IIntractable>().IsInteractable)
+            {
+                ToggleUnitInventory(true);
+            }
         }
-        public virtual void ExitInteract()
+        public virtual void OnCollisionExit2D(Collision2D other)
         {
             ToggleUnitInventory(false);
             IsUIRefreshNeeded = false;
-            DidEnterInteract = false;
         }
-
-        //General ui stuff
         public void RefreshUI()
         {
             //Place Holder variable!
             SetShopNameText(this.transform.name);
             IsUIRefreshNeeded = false;
-            Debug.Log("UI BEEN REFRSHED!");
         }
         public void ToggleUnitInventory(bool value)
         {
@@ -95,8 +74,6 @@ namespace Inventory.Units
         {
             CurrenyAmountText.text = amount.ToString();
         }
-
-
         void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
