@@ -26,12 +26,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Apple
+  m_Name: Sword
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Apple
-  basePrice: 5
-  isWearable: 0
+  item_Text: Sword
+  basePrice: 20
+  isWearable: 1
 --- !u!114 &-301794844541590042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,12 +42,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Sword
+  m_Name: Carrot
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Sword
-  basePrice: 20
-  isWearable: 1
+  item_Text: Carrot
+  basePrice: 10
+  isWearable: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,11 +84,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1a038ba1b51974da7fb9fa4942772a, type: 3}
-  m_Name: Carrot
+  m_Name: Apple
   m_EditorClassIdentifier: 
   item_Icon: {fileID: 0}
-  item_Text: Carrot
-  basePrice: 10
+  item_Text: Apple
+  basePrice: 5
   isWearable: 0
 --- !u!114 &6250497256740511356
 MonoBehaviour:

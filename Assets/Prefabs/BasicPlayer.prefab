@@ -423,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8948463697237353231
 Transform:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
   self_isInteracting: 0
   interactingWithUnit: {fileID: 0}
   self_PlayerUI:
-    myInvetnroy: {fileID: 0}
+    Invetnroy: {fileID: 0}
     self_listItemUi: []
     UnitsInventoryPanel: {fileID: 6339269264655846368}
     shopNameText: {fileID: 3560521514413625423}
@@ -768,6 +768,3 @@ MonoBehaviour:
   inventory_Path: 
   currencyAmount: 0
   buySellFactor: 0
-  self_Ref:
-    m_AssetGUID: b586ebc40259de34982587a7adc32c75
-    m_SubObjectName: 

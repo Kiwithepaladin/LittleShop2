@@ -37,7 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Units\Unit_ItemUI.cs" />
+     <Compile Include="Assets\Scipts_Refactor\Unit.cs" />
+     <Compile Include="Assets\Scipts_Refactor\Interface\IIntractableUI.cs" />
+     <Compile Include="Assets\Scipts_Refactor\Player.cs" />
      <Compile Include="Assets\Scripts\Units\Player\Player_UI.cs" />
+     <Compile Include="Assets\Scipts_Refactor\Interface\IIntractable.cs" />
      <Compile Include="Assets\Scripts\Units\NPC\NPC.cs" />
      <Compile Include="Assets\Scripts\Units\Unit_InventoryUI.cs" />
      <Compile Include="Assets\Scripts\Units\Unit_Inventory.cs" />
